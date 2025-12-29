@@ -181,9 +181,6 @@ cd frontend
 npm test
 ```
 
-## 🤝 Contributing
-
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 ## 📄 License
 
