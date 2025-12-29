@@ -1,0 +1,23 @@
+# Pinned dependencies based on project imports and the virtualenv metadata
+# Note: API keys should be set via environment variables (e.g., .env) — do NOT commit secrets to repo
+
+Flask==3.1.1
+Flask-Cors==6.0.1
+google-generativeai==0.8.5
+google-ai-generativelanguage==0.6.15
+groq==0.30.0
+inference-sdk==0.51.10
+requests==2.32.4
+numpy==2.2.6
+Pillow==11.3.0
+opencv-python==4.10.0.84
+supervision==0.25.1
+aiohttp==3.10.11
+dataclasses-json==0.6.0
+backoff==2.2.0
+py-cpuinfo==9.0.0
+python-dotenv==1.0.0
+
+# Optional / recommended (only if you use related features)
+pandas==2.3.1  # only needed for optional analysis utilities
+
