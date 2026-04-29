@@ -1,0 +1,162 @@
+{
+  "title": "Breast Cancer Risk Assessment",
+  "description": "Answer the following questions honestly to help estimate your personal risk factors for breast cancer. This assessment is based on widely recognised medical risk factors.",
+  "disclaimer": "⚠️ This quiz is for informational purposes only and does not constitute medical advice. Please consult a qualified healthcare professional for personalised guidance and diagnosis.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is your age?",
+      "options": [
+        { "text": "Under 30", "points": 0 },
+        { "text": "30–39", "points": 1 },
+        { "text": "40–49", "points": 2 },
+        { "text": "50–59", "points": 3 },
+        { "text": "60 or older", "points": 4 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Do you have a first-degree relative (mother, sister, daughter) diagnosed with breast cancer?",
+      "options": [
+        { "text": "No", "points": 0 },
+        { "text": "Yes, one relative", "points": 2 },
+        { "text": "Yes, two or more relatives", "points": 4 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Have you ever been personally diagnosed with breast cancer, DCIS, or LCIS?",
+      "options": [
+        { "text": "No", "points": 0 },
+        { "text": "Yes", "points": 5 }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Have you undergone genetic testing that showed a BRCA1 or BRCA2 mutation?",
+      "options": [
+        { "text": "No / Not tested", "points": 0 },
+        { "text": "Yes", "points": 5 }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "At what age did you have your first menstrual period?",
+      "options": [
+        { "text": "14 or older", "points": 0 },
+        { "text": "12–13", "points": 1 },
+        { "text": "Under 12", "points": 2 }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Have you gone through menopause? If yes, at what age?",
+      "options": [
+        { "text": "Not yet / Before 50", "points": 0 },
+        { "text": "Age 50–54", "points": 1 },
+        { "text": "Age 55 or older", "points": 2 }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Have you ever given birth to a child?",
+      "options": [
+        { "text": "Yes, before age 30", "points": 0 },
+        { "text": "Yes, at age 30 or older", "points": 1 },
+        { "text": "No", "points": 2 }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Have you used hormone replacement therapy (HRT) for more than 5 years?",
+      "options": [
+        { "text": "No", "points": 0 },
+        { "text": "Yes", "points": 2 }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "How would you describe your alcohol consumption?",
+      "options": [
+        { "text": "None", "points": 0 },
+        { "text": "Light (1–3 drinks per week)", "points": 1 },
+        { "text": "Moderate (4–7 drinks per week)", "points": 2 },
+        { "text": "Heavy (more than 7 drinks per week)", "points": 3 }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "How would you describe your physical activity level?",
+      "options": [
+        { "text": "Active (150+ minutes moderate exercise per week)", "points": 0 },
+        { "text": "Somewhat active (60–149 minutes per week)", "points": 1 },
+        { "text": "Sedentary (less than 60 minutes per week)", "points": 2 }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What is your body weight status?",
+      "options": [
+        { "text": "Healthy weight (BMI 18.5–24.9)", "points": 0 },
+        { "text": "Overweight (BMI 25–29.9)", "points": 1 },
+        { "text": "Obese (BMI 30+)", "points": 2 }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Do you smoke or have you smoked regularly in the past?",
+      "options": [
+        { "text": "Never smoked", "points": 0 },
+        { "text": "Former smoker", "points": 1 },
+        { "text": "Current smoker", "points": 2 }
+      ]
+    }
+  ],
+  "scoring": [
+    {
+      "range": "0-5",
+      "level": "Low Risk",
+      "description": "Your responses suggest a relatively low level of risk factors for breast cancer. Continue healthy habits and attend routine screenings as recommended for your age.",
+      "recommendations": [
+        "Maintain a healthy weight and stay physically active.",
+        "Limit alcohol consumption.",
+        "Follow your doctor's advice on routine breast screening."
+      ]
+    },
+    {
+      "range": "6-12",
+      "level": "Moderate Risk",
+      "description": "Your responses indicate a moderate level of risk factors. Awareness and proactive screening are especially important for you.",
+      "recommendations": [
+        "Discuss your risk factors with your doctor.",
+        "Ensure you are up-to-date with recommended breast cancer screenings.",
+        "Consider lifestyle changes such as reducing alcohol intake and increasing physical activity.",
+        "Perform monthly breast self-examinations."
+      ]
+    },
+    {
+      "range": "13-20",
+      "level": "High Risk",
+      "description": "Your responses suggest a higher level of risk factors for breast cancer. It is important to speak with a healthcare professional soon.",
+      "recommendations": [
+        "Schedule an appointment with your doctor or a specialist as soon as possible.",
+        "Ask about enhanced screening options such as MRI in addition to mammography.",
+        "Discuss genetic counselling if you have a strong family history.",
+        "Make healthy lifestyle changes — diet, exercise, and reducing alcohol can all help lower risk.",
+        "Perform monthly breast self-examinations and report any changes immediately."
+      ]
+    },
+    {
+      "range": "21+",
+      "level": "Very High Risk",
+      "description": "Your responses indicate a very high level of known risk factors. Urgent medical consultation is strongly advised.",
+      "recommendations": [
+        "Consult a healthcare professional or oncologist promptly.",
+        "Request a comprehensive risk assessment and personalised screening plan.",
+        "Consider genetic testing for BRCA mutations if not already done.",
+        "Explore risk-reduction strategies including medication (chemoprevention) or preventive surgery if recommended by your doctor.",
+        "Build a strong support network and stay informed."
+      ]
+    }
+  ]
+}

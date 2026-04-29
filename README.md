@@ -9,38 +9,42 @@
 
 A comprehensive full-stack application designed to promote breast cancer awareness, early detection, and personalized risk assessment. The platform leverages advanced machine learning models, AI-powered chatbots, and interactive quizzes to provide users with valuable health insights and support.
 
-## ✨ Features
+---
 
-### 🤖 AI-Powered Health Assistant
+## Features
+
+### AI-Powered Health Assistant
 - **Engine**: Groq (Llama 3.1)
 - Natural language processing for health-related queries
 - Provides reliable, evidence-based medical information
 - 24/7 availability for health concerns and guidance
 
-### 📋 Comprehensive Risk Assessment
+### Comprehensive Risk Assessment
 - **Engine**: Groq (Llama 3.1)
 - Personalized breast cancer risk evaluation
 - Considers genetic, lifestyle, and medical history factors
 - Provides actionable insights and recommendations with structured analysis
 
-### 🔍 Advanced Scan Analysis
+### Advanced Scan Analysis
 - **Engine**: Roboflow Computer Vision
 - AI-assisted analysis of medical images (mammograms/ultrasound)
 - Quick and accurate preliminary assessments
 - Secure storage of scan results with privacy controls
 
-### 📰 Educational Blog Section
+### Educational Blog Section
 - Informative articles about breast health and cancer awareness
 - Latest research and medical advancements
 - Personal stories and community experiences
 - Tips for self-examination and early detection
 
-### 🌐 User-Friendly Dashboard
+### User-Friendly Dashboard
 - Intuitive interface for easy navigation
 - Secure user authentication and data management
 - Personalized health insights and history
 
-## 📂 Project Structure
+---
+
+## Project Structure
 
 The codebase is organized into a modular frontend-backend architecture:
 
@@ -49,149 +53,190 @@ The codebase is organized into a modular frontend-backend architecture:
 ├── frontend/             # Next.js Application
 │   ├── app/              # App Router pages and layouts
 │   ├── components/       # Reusable UI components
-│   └── ...
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and helpers
+│   ├── styles/           # Global and component styles
+│   └── public/           # Static assets
 │
 ├── backend/              # Python Flask API
-│   ├── app/              # Application Package
-│   │   ├── services/     # Business Logic (ML, Chat, Risk)
-│   │   ├── routes.py     # API Endpoints
-│   │   └── __init__.py   # App Factory
-│   ├── data/             # Data Storage
-│   │   ├── scans.db      # SQLite Database
-│   │   └── ...           # Quiz JSON and samples
-│   ├── app.py            # Entry Point
-│   └── requirements.txt  # Dependencies
+│   ├── app/              # Application package
+│   │   ├── services/     # Business logic (ML, Chat, Risk)
+│   │   ├── routes.py     # API endpoints
+│   │   └── __init__.py   # App factory
+│   ├── data/             # Data storage
+│   │   ├── scans.db      # SQLite database
+│   │   └── ...           # Quiz JSON and sample data
+│   ├── app.py            # Entry point
+│   ├── config.py         # Application configuration
+│   └── requirements.txt  # Python dependencies
+│
+└── routes/               # Shared route definitions
 ```
 
-## 🛠️ Tech Stack
+---
+
+## Tech Stack
 
 ### Backend
-- **Framework**: Python 3.8+, Flask (Modular Blueprint Architecture)
+- **Runtime**: Python 3.8+
+- **Framework**: Flask with modular Blueprint architecture
 - **Database**: SQLite
-- **AI/ML**: 
-  - **Roboflow API** for image analysis
-  - **Groq API** (Llama 3.1) for natural language processing and risk assessment
-- **API**: RESTful architecture
+- **AI / ML**:
+  - Roboflow API for medical image analysis
+  - Groq API (Llama 3.1) for natural language processing and risk assessment
+- **API Style**: RESTful
 
-### Frontend  
+### Frontend
 - **Framework**: Next.js 13+ with React 18+
 - **Styling**: Tailwind CSS with custom theming
 - **Icons**: Lucide React
 - **State Management**: React Context API
 - **Form Handling**: React Hook Form with Yup validation
 
-## 🚀 Getting Started
+---
+
+## Getting Started
 
 ### Prerequisites
 - Python 3.8 or higher
 - Node.js 16+ and npm 8+
-- API keys for **Roboflow** and **Groq**
+- API keys for Roboflow and Groq
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/breast-care.git
-   cd breast-care
-   ```
+**1. Clone the repository**
+```bash
+git clone https://github.com/yourusername/breast-care.git
+cd breast-care
+```
 
-2. **Backend Setup**
-   ```bash
-   # Navigate to backend directory
-   cd backend
-   
-   # Create and activate virtual environment
-   python -m venv venv
-   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-   
-   # Install dependencies
-   pip install -r requirements.txt
-   
-   # Set up environment variables
-   # Ensure you have a valid .env or update backend/config.py with:
-   # ROBOFLOW_API_KEY
-   # GROQ_API_KEY
-   
-   # Start the backend server (Database is initialized automatically in backend/data/)
-   python app.py
-   ```
+**2. Backend Setup**
+```bash
+# Navigate to the backend directory
+cd backend
 
-3. **Frontend Setup**
-   ```bash
-   # Open a new terminal and navigate to frontend
-   cd frontend
-   
-   # Install dependencies
-   npm install
-   
-   # Start development server
-   npm run dev
-   ```
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate       # Linux / macOS
+.\venv\Scripts\activate        # Windows
 
-4. **Access the Application**
-   - Frontend: `http://localhost:3000`
-   - Backend API: `http://localhost:5000`
+# Install dependencies
+pip install -r requirements.txt
 
-## 📚 API Documentation
+# Configure environment variables
+# Create a .env file or update backend/config.py with the following keys:
+# ROBOFLOW_API_KEY=<your_key>
+# GROQ_API_KEY=<your_key>
 
-### Available Endpoints
+# Start the backend server (SQLite database initializes automatically)
+python app.py
+```
 
-#### Chat API
-- `POST /api/chat` - Interact with the AI health assistant
-  ```json
-  {
-    "message": "What are the early signs of breast cancer?"
-  }
-  ```
+**3. Frontend Setup**
+```bash
+# Open a new terminal and navigate to the frontend directory
+cd frontend
 
-#### Scan Analysis
-- `POST /api/check_scan` - Submit medical scans for analysis
-  ```json
-  {
-    "image": "base64_encoded_image",
-    "fullName": "Jane Doe",
-    "age": 45,
-    "gender": "Female",
-    "contact": "1234567890"
-  }
-  ```
+# Install dependencies
+npm install
 
-#### Risk Assessment
-- `POST /api/risk-assessment` - Process risk assessment quiz based on chat conversation history
-  ```json
-  {
-     "conversation": [
-         {"role": "assistant", "content": "Question 1..."},
-         {"role": "user", "content": "Answer 1..."}
-     ]
-  }
-  ```
+# Start the development server
+npm run dev
+```
 
-## 🧪 Testing
+**4. Access the Application**
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:5000`
 
-### Backend Tests
+---
+
+## API Documentation
+
+### Chat
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/chat` | Interact with the AI health assistant |
+
+Request body:
+```json
+{
+  "message": "What are the early signs of breast cancer?"
+}
+```
+
+### Scan Analysis
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/check_scan` | Submit a medical scan for AI analysis |
+
+Request body:
+```json
+{
+  "image": "base64_encoded_image",
+  "fullName": "Jane Doe",
+  "age": 45,
+  "gender": "Female",
+  "contact": "1234567890"
+}
+```
+
+### Risk Assessment
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/risk-assessment` | Process a risk assessment based on quiz conversation history |
+
+Request body:
+```json
+{
+  "conversation": [
+    { "role": "assistant", "content": "Question 1..." },
+    { "role": "user",      "content": "Answer 1..."   }
+  ]
+}
+```
+
+---
+
+## Testing
+
+### Backend
 ```bash
 cd backend
 pytest
 ```
 
-### Frontend Tests
+### Frontend
 ```bash
 cd frontend
 npm test
 ```
 
+ HEAD
+=======
+---
 
-## 📄 License
+## Contributing
+ 7592cc5 (update readme file & risk assessment)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Contributions are welcome. Please read the [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
-## 📧 Contact
+---
 
-For questions or support, please contact [anvragsingh@gmail.com](mailto:anvragsingh@gmail.com)
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+For questions or support, reach out at [anvragsingh@gmail.com](mailto:anvragsingh@gmail.com).
 
 ---
 
 <div align="center">
-  Made with ❤️ to support breast cancer awareness and early detection through innovative technology.
+  Made to support breast cancer awareness and early detection through innovative technology.
 </div>

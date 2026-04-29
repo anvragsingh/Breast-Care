@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Logo } from "@/components/logo"
-import quizData from '../../../breast_cancer_quiz.json'
+import quizData from '../../breast_cancer_quiz.json'
 
 export default function RiskAssessmentPage() {
   // Merge original questions with new ones
