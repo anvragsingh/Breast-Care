@@ -214,21 +214,6 @@ cd frontend
 npm test
 ```
 
- HEAD
-=======
----
-
-## Contributing
- 7592cc5 (update readme file & risk assessment)
-
-Contributions are welcome. Please read the [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 ## Contact
